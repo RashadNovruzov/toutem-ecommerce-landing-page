@@ -90,13 +90,13 @@ body{
 }
 
 .mobile-menu{
-	position: absolute;
+	position: fixed;
 	top: 69px;
 	left: 0;
 	width: 75%;
 	background-color: #fff;
 	z-index: 50;
-	height: 100%;
+	min-height: 100vh;
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 	transition: 0.2s all;
 	opacity: 0;
@@ -139,6 +139,98 @@ body{
 }
 
 
+
+/* ========================== INTRO ======================= */
+
+
+.intro{
+	padding-top: 70px;
+}
+
+.intro__ellipse_3{
+	display: none;
+}
+.intro__container{
+	position: relative;
+}
+
+.intro__ellipse_2{
+	display: none;
+	max-width: 300px;
+}
+.intro__ellipse{
+	position: absolute;
+	right: 0;
+	top: 0;
+	max-width: 600px;
+	width: 100%;
+	height: 100%;
+	z-index: -99;
+}
+.intro__medicine{
+	max-width: 650px;
+	width: 100%;
+}
+
+.intro__content{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.intro__text{
+	margin-left: 30px;
+}
+.intro__title{
+	
+	max-width: 523px;
+	padding-right: 100px;
+	font-weight: 600;
+	font-size: 96px;
+	line-height: 90.84%;
+	color: #5FD788;
+	margin-bottom: 45px;
+}
+
+
+.intro__body{
+	max-width: 374px;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 140%;
+	color: #9CA3AF;
+}
+
+@media (max-width: 1154px){
+	.intro__title{
+		font-size: 86px;
+	}
+}
+
+@media (max-width: 1112px){
+	.intro__title{
+		font-size: 75px;
+		padding-right: 50px;
+	}
+}
+
+@media (max-width: 974px){
+	.intro__medicine,
+	.intro__ellipse{
+		display: none;
+	}
+	.intro__ellipse_2{
+		display: block;
+	}
+
+	.intro__text{
+		margin-left:0px;
+		padding-top: 18%;
+		padding-left: 13%;
+	}
+}
+
+/*mobile */
 @media (max-width: 767.98px){
 	.header__bag,
 	.header__search,
@@ -152,10 +244,72 @@ body{
 	.header__content{
 		justify-content: space-between;
 	}
+	.intro__ellipse_2{
+		display: none;
+	}
+	.intro__ellipse_3{
+		max-width: 280px;
+		width: 100%;
+		display: block
+	}
+	.intro__content{
+		flex-direction: column;
+	}
+
+	.intro__title{
+
+		margin: 0 auto;
+		padding: 0;
+		max-width: 200px;
+		font-size: 40px;
+		margin-bottom: 30px;
+	}
+
+	.intro__body{
+		max-width: 311px;
+		font-size: 12px;
+	}
+	.intro__text{
+		text-align: center;
+		padding: 0;
+	}
 }
 
 
-/* ========================== INTRO ======================= */
 
+/* ================= EXplore cards ================== */
+.explore-cards{
+	padding-top: 154px;
+}
 
+.explore__items{
+	display: flex;
+	justify-content: center;
+}
+.explore__item{
+	transition: 0.3s all;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 274px;
+	width: 274px;
+	background: #F9FAFB;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+	border-radius: 0px 20px;
+}
 
+.explore-item__text{
+	padding-top: 20px;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 140%;
+	color: #5FD788;
+}
+
+.explore__icon{
+	background-image: url("../img/green_blob.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
