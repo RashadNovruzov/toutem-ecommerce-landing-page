@@ -329,6 +329,7 @@ body{
 /*=============== Bestsellers =============*/
 
 .bestsellers{
+	padding-bottom: 110px;
 	max-width: 1500px;
 	margin: 0 auto;
 	background-image: url("../img/bestseller-flower.png");
@@ -352,7 +353,6 @@ body{
 
 .bestsellers .card__info-2{
 	background-image: url('../img/bestsellers-2.png');
-
 }
 
 .bestsellers__container{
@@ -378,12 +378,14 @@ body{
 }
 
 .card__info{
+	padding: 10px;
 	background-color: rgba(255, 255, 255, 0.7);
 	backdrop-filter: blur(15px);
 	border-radius: 0px 20px;	
 }
 
 .card__info-title{
+	display: inline-block;
 	font-weight: 700;
 	font-size: 20px;
 	line-height: 140%;
@@ -408,6 +410,24 @@ body{
 	gap: 20px;
 }
 
+.card__info-price{
+	margin-left: 10px;
+	vertical-align: middle;
+	padding: 2px 5px;
+	display: inline-block;
+	width: 32px;
+	height: 15px;
+	background-color: #5FD788;
+	border-radius: 30px;
+	color: #fff;
+	font-weight: 700;
+	font-size: 10px;
+	line-height: 97.9%;
+	text-align: center;
+	letter-spacing: 0.01em;
+	text-transform: uppercase;
+}
+
 .card__info-body{
 	display: flex;
 	align-items: center;
@@ -422,6 +442,92 @@ body{
 }
 
 
+/* ==================== ADS ======================== */
+
+.ads{
+	min-height: 523px;
+	padding-top: 114px;
+	padding-bottom: 105px;
+	background-color: #5FD788;
+	background-image: url("../img/Image.png");
+	background-position: right top;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.ads__container{
+	padding-left: 10px;
+}
+
+.ads__title{
+	margin-bottom: 35px;
+	max-width: 540px;
+	font-weight: 600;
+	font-size: 48px;
+	line-height: 119.4%;
+	letter-spacing: 0.01em;
+	color: #FFFFFF;
+}
+.ads__button{
+	text-align: center;
+	display: inline-block;
+	min-width: 270px;
+}
+.button__white{
+	background-color: #fff;
+	color: #000;
+}
+
+
+/* ================== Trends ================= */
+
+.trends{
+	padding-top: 115px;
+	padding-bottom: 110px;
+	max-width: 1500px;
+	margin: 0 auto;
+	background-image: url("../img/trends-flower.png");
+	background-repeat: no-repeat;
+	background-position: center left;
+	background-size: 18%;
+}
+.trends .card__info-1,
+.trends .card__info-2{
+	display: inline-block;
+	background-image: url('../img/trends-1.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 390px;
+	max-width: 375px;
+	display: flex;
+	align-items: flex-end;
+}
+
+.trends .card__info-2{
+	background-image: url('../img/trends-2.png');
+}
+.trends__container{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.trends__button{
+	display: inline-block;
+	text-align: center;
+	min-width: 274px !important;
+}
+
+
+
+@media(max-width: 1212px){
+	.ads{
+		background-size: 40% 100%;
+	}
+}
+
 @media (max-width: 1154px){
 	.intro__title{
 		font-size: 86px;
@@ -433,6 +539,8 @@ body{
 		font-size: 75px;
 		padding-right: 50px;
 	}
+
+
 }
 
 @media(max-width: 1084px){
@@ -446,6 +554,15 @@ body{
 }
 
 @media(max-width: 1000px){
+
+	.trends{
+		background-position: top left;
+		background-size: 40%;
+	}
+	.trends__container{
+		flex-direction: column;
+		gap: 130px;
+	}
 
 	.bestsellers{
 		background-position: top left;
@@ -479,6 +596,19 @@ body{
 }
 
 
+@media(max-width: 916px){
+	.ads{
+		background-image: url("../img/image-2.png");
+		background-size: contain;
+	}
+}
+
+@media (max-width: 854px){
+	.ads{
+		background-size: 30% 100%;
+	}
+}
+
 /*mobile */
 
 @media (max-width: 800px){
@@ -488,6 +618,13 @@ body{
 		gap: 45px;
 	}
 }
+@media (max-width: 774px){
+	.ads{
+		background-image:url("../img/image-3.png");
+		background-size: cover;
+	}
+}
+
 @media (max-width: 767.98px){
 
 	.mobile-ellipse{
