@@ -144,7 +144,7 @@ body{
 
 
 .intro{
-	padding-top: 70px;
+	padding-top: 140px;
 }
 
 .intro__ellipse_3{
@@ -201,6 +201,227 @@ body{
 	color: #9CA3AF;
 }
 
+
+
+
+/* ================= EXplore cards ================== */
+.explore-cards{
+	padding-top: 154px;
+}
+
+.explore__items{
+	display: flex;
+	justify-content: center;
+}
+.explore__item{
+	transition: 0.3s all;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 274px;
+	width: 274px;
+	background: #F9FAFB;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+	border-radius: 0px 20px;
+}
+
+.explore__item:hover{
+	background-color:#5FD788 ;
+}
+
+.explore__item:hover .explore-item__text{
+	color: #fff;
+}
+
+.explore__item:hover .explore__icon{
+	background-image: url("../img/white-blob.png")			;
+}
+.explore-item__text{
+	padding-top: 20px;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 140%;
+	color: #5FD788;
+}
+
+.explore__icon{
+	background-image: url("../img/green_blob.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+
+
+
+/* =============== ABOUT ==================== */
+
+.about{
+	margin: 0 auto;
+	max-width: 1500px;
+	background-image: url("../img/ellipse-left.png");
+	background-position: left center;
+	background-repeat: no-repeat;
+	min-height: 887px;
+}
+
+.mobile-ellipse{
+	display: none;
+}
+
+.about__container{
+	min-height: 887px;
+	display: flex;
+	align-items: center;
+}
+
+
+.about__content{
+	padding-top: 100px;
+	padding-right: 15px;
+	width: 100%;
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+}
+.about__title{
+	margin-bottom: 35px;
+	max-width: 573px;
+	font-weight: 600;
+	font-size: 45px;
+	line-height: 107.9%;
+	text-align: right;
+	letter-spacing: 0.01em;
+	color: #5FD788;
+}
+
+.about__text{
+	margin-bottom: 35px;
+	width: 374px;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 140%;
+	text-align: right;
+	color: #9CA3AF;
+}
+
+.button{
+	border-radius: 8px;
+	font-weight: 700;
+	min-width: 274px;
+	font-size: 16px;
+	line-height: 97.9%;
+	letter-spacing: 0.01em;
+	text-transform: uppercase;
+	padding: 12px 30px;
+	text-align: right;
+}
+
+.button__green{
+	background-color: #5FD788;
+	color: #fff;
+}
+
+
+
+/*=============== Bestsellers =============*/
+
+.bestsellers{
+	max-width: 1500px;
+	margin: 0 auto;
+	background-image: url("../img/bestseller-flower.png");
+	background-repeat: no-repeat;
+	background-position: center left;
+	background-size: 18%;
+}
+
+
+.bestsellers .card__info-1,
+.bestsellers .card__info-2{
+	display: inline-block;
+	background-image: url('../img/bestseller-1.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 390px;
+	max-width: 375px;
+	display: flex;
+	align-items: flex-end;
+}
+
+.bestsellers .card__info-2{
+	background-image: url('../img/bestsellers-2.png');
+
+}
+
+.bestsellers__container{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.bestsellers__button{
+	display: inline-block;
+	text-align: center;
+	min-width: 274px !important;
+}
+
+.info__title{
+	margin-bottom: 30px;
+	font-weight: 600;
+	font-size: 50px;
+	line-height: 107.9%;
+	letter-spacing: 0.01em;
+	color: #5FD788;
+}
+
+.card__info{
+	background-color: rgba(255, 255, 255, 0.7);
+	backdrop-filter: blur(15px);
+	border-radius: 0px 20px;	
+}
+
+.card__info-title{
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 140%;
+	color: #1F2937;
+}
+
+.cards{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 45px;
+}
+
+.card__info-icon{
+	height: 70px;
+	width: 100px;
+	padding-left: 10px;
+}
+
+.cards__items{
+	display: flex;
+	gap: 20px;
+}
+
+.card__info-body{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.card__info-text{
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 140%;
+	color: #6B7280;
+}
+
+
 @media (max-width: 1154px){
 	.intro__title{
 		font-size: 86px;
@@ -211,6 +432,33 @@ body{
 	.intro__title{
 		font-size: 75px;
 		padding-right: 50px;
+	}
+}
+
+@media(max-width: 1084px){
+	.about__title{
+		font-size: 40px;
+	}
+
+	.about{
+		background-size: 50%;
+	}
+}
+
+@media(max-width: 1000px){
+
+	.bestsellers{
+		background-position: top left;
+		background-size: 40%;
+	}
+	.bestsellers__container{
+		flex-direction: column;
+		gap: 130px;
+	}
+
+	.cards__items{
+		flex-direction: column;
+		gap: 80px;
 	}
 }
 
@@ -230,8 +478,49 @@ body{
 	}
 }
 
+
 /*mobile */
+
+@media (max-width: 800px){
+	.explore__items{
+		flex-direction: column;
+		align-items: center;
+		gap: 45px;
+	}
+}
 @media (max-width: 767.98px){
+
+	.mobile-ellipse{
+		display: block;
+	}
+
+	.about{
+		background-image: none;
+	}
+
+	.about__text{
+		text-align: center;
+	}
+
+	.about__title{
+		text-align: center;
+	}
+
+	.about__content{
+		padding-right: 0;
+		padding-top: 33px;
+		text-align: center;
+		align-items: center;
+	}
+
+	.about__container{
+		flex-direction: column;
+	}
+	.explore__item{
+		width: 174px;
+		height: 174px;
+	}
+
 	.header__bag,
 	.header__search,
 	.header__menu{
@@ -275,41 +564,27 @@ body{
 	}
 }
 
+@media (max-width: 478px){
 
+	.about__text{
+		max-width: 300px;
+	}
 
-/* ================= EXplore cards ================== */
-.explore-cards{
-	padding-top: 154px;
-}
+	.cards__items{
+		gap: 130px;
+	}
 
-.explore__items{
-	display: flex;
-	justify-content: center;
-}
-.explore__item{
-	transition: 0.3s all;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	height: 274px;
-	width: 274px;
-	background: #F9FAFB;
-	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
-	border-radius: 0px 20px;
-}
+	.card__item{
+		margin: 0 auto;
+		max-width: 280px;
+		max-height: 300px;
+	}
 
-.explore-item__text{
-	padding-top: 20px;
-	font-weight: 600;
-	font-size: 14px;
-	line-height: 140%;
-	color: #5FD788;
-}
+	.about__title{
+		font-size: 20px;
+	}
 
-.explore__icon{
-	background-image: url("../img/green_blob.png");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
+	.about__text{
+		font-size: 10px;
+	}
 }
