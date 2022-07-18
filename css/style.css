@@ -1,11 +1,14 @@
 /* Reset styles */
+@import "normalize.css";
 @import "reset.css";
+
 
 /* Font family */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 *{
 	box-sizing: border-box;
+	transition: 0.2s all;
 }
 
 body{
@@ -28,6 +31,30 @@ body{
 	flex: 1 1 100%;/* flex-grow, flex-shrink, flex-basis*/
 }
 
+/* ============ Dark Mode ============ */
+:root{
+	--color: #000;
+	--mob_color: #fff;
+}
+.sun-night:before{
+	content: "\e9d6";
+	font-family: 'icomoon' !important;
+	font-size: 18px;
+	color: var(--color);
+}
+
+.sun-night{
+	margin-right: 10px;
+	display: inline-block;
+}
+
+.sun-night:hover{
+
+	cursor: pointer !important;
+}
+
+
+
 /* =========================== Header ============================== */
 
 
@@ -45,6 +72,7 @@ body{
 .header__icons{
 	padding-right: 15px;
 }
+
 
 .header__content{
 	padding: 0 15px;
@@ -74,7 +102,7 @@ body{
 }
 
 .menu__list a:hover{
-	color: yellowgreen;
+	color: yellowgreen !important;
 }
 
 
@@ -106,7 +134,7 @@ body{
 .mobile-menu:before{
 	content:"";
 	width: 75%;
-	background-color:#fff;
+	background-color:var(--mob_color);
 	position: fixed;
 	top: 0px;
 	left: 0;
@@ -227,15 +255,15 @@ body{
 }
 
 .explore__item:hover{
-	background-color:#5FD788 ;
+	background-color:#5FD788 !important;
 }
 
 .explore__item:hover .explore-item__text{
-	color: #fff;
+	color: #fff !important;
 }
 
 .explore__item:hover .explore__icon{
-	background-image: url("../img/white-blob.png")			;
+	background-image: url("../img/white-blob.png") !important;
 }
 .explore-item__text{
 	padding-top: 20px;
@@ -549,7 +577,7 @@ body{
 }
 
 .blog__header:hover{
-	cursor: pointer;
+	cursor: pointer !important;
 }
 
 .blog__body{
@@ -733,6 +761,10 @@ body{
 
 @media (max-width: 767.98px){
 
+	.header .sun-night{
+		display: none;
+	}
+
 	.footer__content{
 		max-height: 100%;
 	}
@@ -907,5 +939,11 @@ body{
 
 	.about__text{
 		font-size: 10px;
+	}
+}
+
+@media (min-width: 767.98px){
+	.mobile-menu{
+		display: none;
 	}
 }
